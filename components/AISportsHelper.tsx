@@ -31,7 +31,7 @@ export default function AISportsHelper() {
       const data = await response.json();
       setAnswer(data.response);
     } catch (err) {
-      setError('Oops! Something went wrong. Please try again!');
+      setError('Could not connect to OpenAI. Please make sure your API key is properly set up.');
     } finally {
       setLoading(false);
     }
@@ -43,7 +43,7 @@ export default function AISportsHelper() {
       
       <TextInput
         style={styles.input}
-        placeholder="Ask anything about sports!"
+        placeholder="Type 'test' to check if OpenAI is connected"
         value={question}
         onChangeText={setQuestion}
         multiline
@@ -57,7 +57,7 @@ export default function AISportsHelper() {
         {loading ? (
           <ActivityIndicator color="#FFFFFF" />
         ) : (
-          <Text style={styles.buttonText}>Ask Question!</Text>
+          <Text style={styles.buttonText}>Test Connection</Text>
         )}
       </TouchableOpacity>
 
