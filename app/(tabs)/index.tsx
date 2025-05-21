@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, ScrollView, Image, Pressable } from 'react-native';
 import { Link } from 'expo-router';
+import AISportsHelper from '@/components/AISportsHelper';
 
 export default function ExploreScreen() {
   return (
@@ -14,6 +15,8 @@ export default function ExploreScreen() {
           <Text style={styles.heroSubtitle}>Let's discover amazing sports together!</Text>
         </View>
       </View>
+
+      <AISportsHelper />
 
       <View style={styles.featuredSection}>
         <Text style={styles.sectionTitle}>Featured Sport</Text>
